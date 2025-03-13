@@ -29,8 +29,13 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #003366;
+  background-color: #195FA6;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  color: white;
+  z-index: 1000;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .logo {
@@ -45,7 +50,7 @@
 }
 
 .nama {
-  font-size: 24px;
+  font-size: 1.5rem; /* 24px */
   font-weight: 600;
   color: #fff;
 }
@@ -64,6 +69,7 @@
   transition: all 0.3s;
   padding: 8px 20px;
   position: relative;
+  font-size: 1rem; /* 16px */
 }
 
 .nav-link::after {
@@ -82,6 +88,53 @@
 .nav-link:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .nav {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      right: 10px;
+      background-color: #195FA6;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav.active {
+      display: flex;
+  }
+
+  .hamburger {
+      display: flex;
+  }
+
+  .nama {
+      font-size: 1.25rem; /* 20px pada layar kecil */
+  }
+
+  .nav-link {
+      font-size: 0.875rem; /* 14px pada layar kecil */
+  }
 }
   /* ==============================
      3) MAIN CONTENT
@@ -140,11 +193,7 @@
      4) INDIVIDUAL SLIDING PANELS
         FOR EACH LOGO
   ============================== */
-  /*
-    .logo-segment is absolutely positioned below
-    each .profile-item's logo. Tweak top/left as
-    needed to align perfectly.
-  */
+
   .logo-segment {
     position: absolute;
     top: 170px;
@@ -214,76 +263,85 @@
   /* ==============================
      5) FOOTER
   ============================== */
+/* FOOTER */
 .footer {
-    background-color: #1E5CA8;
-    color: white;
-    padding: 20px;
-    margin-top: 150px;
-    width: 100%;
-    transition: background 0.3s ease-in-out;
+  background-color: #1E5CA8;
+  color: white;
+  padding: 20px;
+  margin-top: 150px;
+  width: 100%;
+  transition: background 0.3s ease-in-out;
 }
 
 .footer:hover {
-    background: #164b87;
+  background: #164b87;
 }
 
 .footer-container {
-    text-align: left;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1010px;
-    margin: 0 auto;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .footer-column {
-    flex: 1;
-    min-width: 250px;
+  flex: 1;
+  min-width: 250px;
 }
-.footer-column a{
-    margin-left: 10px;
-    color: white
+
+.footer-column a {
+  margin-left: 10px;
+  color: white;
 }
+
 .footer hr {
-    border: 0;
-    height: 1px;
-    background: white;
-    margin: 10px 0;
+  border: 0;
+  height: 1px;
+  background: white;
+  margin: 10px 0;
+}
+
+.activity-list {
+  margin-bottom: 80px;
 }
 
 .footer-bottom {
-    text-align: center;
-    padding-top: 10px;
+  text-align: center;
+  padding-top: 10px;
 }
-.Lokasi iframe{
-    width: 225px;
-    height: 200px;
-    border-radius: 10px;
-    margin-left: 30px;
-    margin-top: 10px;
+
+.Lokasi iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  margin-top: 10px;
 }
-.text-lok{
-    margin-left: 30px;   
+
+.text-lok {
+  margin-left: 30px;
 }
+
 .social-icons {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .social-icons a {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    transition: transform 0.3s ease-in-out;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .social-icons a:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .social-icons img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
   /* ==============================
