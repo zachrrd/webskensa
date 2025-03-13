@@ -24,18 +24,25 @@
     <div class="rectangle rect-right"></div>
   </div>
 
+  
     <!-- Header Section -->
     <header class="header">
       <div class="logo">
           <a href="index.html"><img src="asset/logoskensaremove.png" alt="Logo" class="logo-img"></a>
           <span class="nama">SMK NEGERI 1 DENPASAR</span>
       </div>
-      <nav class="nav">
+      <nav class="nav" id="nav">
           <a href="index.html" class="nav-link">Home</a>
           <a href="jurusan.html" class="nav-link">Jurusan</a>
           <a href="profile2.html" class="nav-link">Profile</a>
       </nav>
+      <button class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+      </button>
   </header>
+
   <!-- MAIN CONTENT -->
   <main>
     <h1 class="page-title">PROFIL</h1>
@@ -117,58 +124,14 @@
       <img id="popup-img" src="" alt="Popup Image"> <!-- Gambar di Popup -->
   </div>
 </div>
-
-  <!-- JS at the bottom -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Grab all clickable logos
-      var logos = document.querySelectorAll('.toggle-logo');
-      
-      // For each logo, find its panel and toggle it
-      logos.forEach(function(logo) {
-        logo.addEventListener('click', function() {
-          // The .profile-item container
-          var parentItem = logo.closest('.profile-item');
-          // The hidden panel inside that item
-          var panel = parentItem.querySelector('.logo-segment');
-          
-          // Toggle the .visible class
-          panel.classList.toggle('visible');
-        });
-      });
-    });
-    
-    // Ambil elemen
-    document.addEventListener("DOMContentLoaded", function () {
-    let popup = document.getElementById("popup");
-    let popupImg = document.getElementById("popup-img");
-    let closeBtn = document.querySelector(".close");
-
-    // Ambil semua tombol "Let's Go!"
-    let buttons = document.querySelectorAll(".letsGoBtn");
-
-    buttons.forEach((button) => {
-        button.addEventListener("click", function () {
-            let imgSrc = this.getAttribute("data-image"); // Ambil gambar dari data-attribute
-            
-            popupImg.src = imgSrc; // Set gambar di popup
-            popup.style.display = "flex"; // Tampilkan popup
-        });
-    });
-
-    // Tombol Close untuk menutup popup
-    closeBtn.addEventListener("click", function () {
-        popup.style.display = "none";
-    });
-
-    // Klik di luar popup untuk menutup
-    window.addEventListener("click", function (event) {
-        if (event.target == popup) {
-            popup.style.display = "none";
-        }
-    });
-});
-
-  </script>  
 </body>
+  <!-- JS at the bottom -->
+  <script src="profile.js"></script> 
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+
 </html>
