@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMKN 1 Denpasar</title>
-    <link rel="stylesheet" href="home.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
     <link rel="icon" type="image/png" href="asset/logoskensaremove.png">
 </head>
 <body>
@@ -16,16 +16,25 @@
             <a href="index.html"><img src="asset/logoskensaremove.png" alt="Logo" class="logo-img"></a>
             <span class="nama">SMK NEGERI 1 DENPASAR</span>
         </div>
-        <nav class="nav">
-            <a href="home.html" class="nav-link">Home</a>
+        <nav class="nav" id="nav">
+            <a href="index.html" class="nav-link">Home</a>
             <a href="jurusan.html" class="nav-link">Jurusan</a>
             <a href="profile2.html" class="nav-link">Profile</a>
         </nav>
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
     <!-- Opening Image Section -->
     <div class="gambaran-sekolah">
-        <img  src="asset/skensa.jpg" alt="Opening Image" class="opening-img">
+        <img src="asset/skensa.jpg" alt="Opening Image" class="opening-img">
+        <div class="text-overlay">
+            <h1>SMK NEGERI 1 DENPASAR</h1>
+            <p>Abhyasad Dharyate Vidya</p>
+        </div>
     </div>
 
     <!-- About Section -->
@@ -33,9 +42,9 @@
         <h1 data-aos="fade-up" data-aos-duration="1000" class="under">INFORMASI</h1>
         <div class="desc">
             <div class="img-section">
-                <img data-aos="fade-right" data-aos-duration="1000" src="asset/kepsek.jpg" alt="Praktek TAV" >
+                <img data-aos="fade-right" data-aos-duration="1000" src="asset/kepsek.jpg" alt="Praktek TAV">
             </div>
-            <div  data-aos="fade-left" data-aos-duration="1000" class="desk">
+            <div data-aos="fade-left" data-aos-duration="1000" class="desk">
                 <div class="text-section">
                     <h2 class="under">SELAMAT DATANG!</h2>
                     <p>Selamat datang di website SMKN 1 Denpasar, sebagai salah satu media komunikasi sekolah dengan masyarakat. Kami berharap kualitas KBM saat ini bisa berjalan dengan baik, lancar, dan memberikan dampak yang membangun bagi siswa/i SMKN 1 Denpasar. Salam sukses untuk kita semua. Terima kasih.</p>
@@ -50,59 +59,65 @@
         <h1 class="no garis">BERITA TERBARU</h1>
         <p class="under">BERIKUT MERUPAKAN BERITA TERBARU DARI SMKN 1 DENPASAR</p>
     </div>
-    
+
     <div class="activity-list">
         <!-- News Rows -->
         <div class="row">
-            <div class="highlight-berita" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" >
-                <img src="asset/gambaran_1.jpg" alt="Gambar Berita" >
+            <div class="highlight-berita" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+                <img src="asset/gambaran_1.jpg" alt="Gambar Berita">
                 <div class="highlight-text">
-                  <div class="judul-text">Prestasi</div> 
-                  Siswa SMKN 1 Denpasar Meraih Medali Silver di Thailand Inventors Days</div>
-              </div>
+                    <div class="judul-text">Prestasi</div>
+                    Siswa SMKN 1 Denpasar Meraih Medali Silver di Thailand Inventors Days
+                </div>
+            </div>
             <div class="highlight-berita" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                 <img src="asset/gambaran_2.jpg" alt="Gambar Berita">
                 <div class="highlight-text">
-                  <div class="judul-text">Prestasi</div> 
-                  Siswa SMKN 1 Denpasar Meraih Medali Silver di Thailand Inventors Days</div>
-              </div>
-            <div class="highlight-berita"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="judul-text">Prestasi</div>
+                    Siswa SMKN 1 Denpasar Meraih Medali Silver di Thailand Inventors Days
+                </div>
+            </div>
+            <div class="highlight-berita" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <img src="asset/gambar_3.jpg" alt="Gambar Berita">
                 <div class="highlight-text">
-                  <div class="judul-text">Studi Banding</div> 
-                  Studi Banding Dari Tim LSP-P1 SMKN 2 KLATEN Dalam Rangka Studi Banding</div>
-              </div>
+                    <div class="judul-text">Studi Banding</div>
+                    Studi Banding Dari Tim LSP-P1 SMKN 2 KLATEN Dalam Rangka Studi Banding
+                </div>
+            </div>
         </div>
         <div class="row">
-          <div class="highlight-berita"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-              <img src="asset/berita4.jpg" alt="Gambar Berita">
-              <div class="highlight-text">
-              <div class="judul-text">Acara</div> 
-              Serah Terima Renovasi Lapangan Basket Bantuan CSR dari Bank BPD Bali</div>
-          </div>
-          <div class="highlight-berita"   data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-              <img src="asset/berita5.jpg" alt="Gambar Berita">
-              <div class="highlight-text">
-                <div class="judul-text">Perayaan</div> 
-                Senin 23 September 2024 seluruh warga sekolah merayakan HUT ke-62 Skensa</div>
+            <div class="highlight-berita" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                <img src="asset/berita4.jpg" alt="Gambar Berita">
+                <div class="highlight-text">
+                    <div class="judul-text">Acara</div>
+                    Serah Terima Renovasi Lapangan Basket Bantuan CSR dari Bank BPD Bali
+                </div>
             </div>
-          <div class="highlight-berita"   data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
-              <img src="asset/berita6.jpg" alt="Gambar Berita">
-              <div class="highlight-text">
-                <div class="judul-text">Prestasi</div> 
-                SMKN 1 Denpasar meraih sukses di ajang perdana SMK FEST 2024 Tingkat Provinsi Bali</div>
+            <div class="highlight-berita" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <img src="asset/berita5.jpg" alt="Gambar Berita">
+                <div class="highlight-text">
+                    <div class="judul-text">Perayaan</div>
+                    Senin 23 September 2024 seluruh warga sekolah merayakan HUT ke-62 Skensa
+                </div>
             </div>
-      </div>
+            <div class="highlight-berita" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                <img src="asset/berita6.jpg" alt="Gambar Berita">
+                <div class="highlight-text">
+                    <div class="judul-text">Prestasi</div>
+                    SMKN 1 Denpasar meraih sukses di ajang perdana SMK FEST 2024 Tingkat Provinsi Bali
+                </div>
+            </div>
+        </div>
     </div>
 
-
+    <!-- Jurusan Section -->
     <section class="container">
         <h1>Jurusan</h1>
         <p>SMKN 1 Denpasar memiliki 12 jurusan. Semua jurusan ini memiliki bidang keahlian yang sering dibutuhkan di dunia kerja.</p>
         <section class="majors-grid">
             <a href="jurusan.html" class="majors-a">
-                <div class="major" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="0" >
-                    <img src="asset/rpl 2.png"alt="Rekayasa Perangkat Lunak">
+                <div class="major" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="0">
+                    <img src="asset/rpl 2.png" alt="Rekayasa Perangkat Lunak">
                     <p>Rekayasa Perangkat Lunak</p>
                 </div>
             </a>
@@ -169,19 +184,15 @@
             <a href="jurusan.html" class="majors-a">
                 <div class="major" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1100">
                     <img src="asset/logopm.webp" alt="">
-                    <p>teknik Pemesinan</p>
+                    <p>Teknik Pemesinan</p>
                 </div>
             </a>
-            
-            <!-- Tambahkan elemen jurusan lainnya -->
         </section>
     </section>
 
-
-
     <!-- Footer -->
     <footer data-aos="fade-up" class="footer">
-        <div  class="footer-container">
+        <div class="footer-container">
             <div class="footer-column" data-aos="fade-up" data-aos-duration="1000">
                 <h3>SMKN 1 Denpasar</h3>
                 <p>JL. HOS COKROAMINOTO NO. 84<br>
@@ -191,16 +202,16 @@
             <div class="footer-column" data-aos="fade-up" data-aos-duration="1000">
                 <h3>Media Sosial</h3>
                 <div class="social-icons">
-                    <a href="https://www.bing.com/ck/a?!&&p=e785a2992be3ab8514f66405ca0333a5d14a421758e15032755e7ca0e4eef3dfJmltdHM9MTczOTIzMjAwMA&ptn=3&ver=2&hsh=4&fclid=11de33df-289d-638f-2c76-264e29cb6214&psq=instagram+smkn+1+denpasar&u=a1aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9zbWtuMWRlbnBhc2FyLw&ntb=1"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
-                    <a href="https://www.bing.com/ck/a?!&&p=93ea9d067bb8a3d67bce645be9b77bc8a55d6f54480e61eb37c986c5bdee2e45JmltdHM9MTczOTIzMjAwMA&ptn=3&ver=2&hsh=4&fclid=11de33df-289d-638f-2c76-264e29cb6214&psq=facebook+smkn+1+denpasar&u=a1aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3Nta25lZ2VyaTFkZW5wYXNhci8&ntb=1"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
-                   <a href="https://www.bing.com/ck/a?!&&p=70fe4656fd5061d43d5833918cbd7621bd5640b24b18e56a90dceda8c863b20eJmltdHM9MTczOTIzMjAwMA&ptn=3&ver=2&hsh=4&fclid=11de33df-289d-638f-2c76-264e29cb6214&psq=youtube+smkn+1+denpasar&u=a1aHR0cHM6Ly93d3cueW91dHViZS5jb20vQHNta24xZGVucGFzYXI&ntb=1"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+                    <a href="https://www.instagram.com/smkn1denpasar/"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/smknegeri1denpasar/"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
+                    <a href="https://www.youtube.com/@smkn1denpasar"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
                 </div>
             </div>
             <div class="footer-column" data-aos="fade-up" data-aos-duration="1000">
                 <h3>Tel./Faks.</h3>
                 <p>(0361) 422401</p>
                 <h3>Email</h3>
-                <a href="contact@smkn1denpasar.sch.id">contact@smkn1denpasar.sch.id</a>
+                <a href="mailto:contact@smkn1denpasar.sch.id">contact@smkn1denpasar.sch.id</a>
             </div>
             <div class="footer-column" data-aos="fade-up" data-aos-duration="1000">
                 <h3 class="text-lok">Lokasi</h3>
@@ -210,29 +221,18 @@
             </div>
         </div>
         <hr>
-        <div class="footer-bottom" >
+        <div class="footer-bottom">
             <p>Copyright By @Kelompok TEN 2024</p>
         </div>
     </footer>
+
+    <!-- AOS Script -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Hamburger Menu Script -->
+    <script src="script.js"></script>
 </body>
 </html>
-<script>
-    window.addEventListener("scroll", function() {
-    let navbar = document.querySelector(".header");
-    let scrollY = window.scrollY;
-    let opacity = Math.max(1 - scrollY / 300, 0);
-    
-    navbar.style.opacity = opacity;
-
-    if (scrollY < lastScroll) {
-        navbar.style.opacity = "1"; // Kembalikan jika scroll ke atas
-    }
-    
-    lastScroll = scrollY;
-});
-
-</script>
