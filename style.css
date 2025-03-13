@@ -3,16 +3,21 @@
     margin: 0;
     padding: 0;
 }
-html{
+
+html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-size: 16px; /* Default font size */
 }
-body{
+
+body {
     font-family: 'Poppins', sans-serif;
     background-color: #f9f9f9;
     color: #195FA6;
+    font-size: 1rem; /* 16px */
 }
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -39,7 +44,7 @@ body{
 }
 
 .nama {
-    font-size: 24px;
+    font-size: 1.5rem; /* 24px */
     font-weight: 600;
     color: #fff;
 }
@@ -58,6 +63,7 @@ body{
     transition: all 0.3s;
     padding: 8px 20px;
     position: relative;
+    font-size: 1rem; /* 16px */
 }
 
 .nav-link::after {
@@ -85,11 +91,11 @@ body{
 }
 
 .judulj {
-    font-size: 48px;
+    font-size: 3rem; /* 48px */
 }
 
 .keteranganj {
-    font-size: 24px;
+    font-size: 1.5rem; /* 24px */
 }
 
 .jurusan {
@@ -125,7 +131,7 @@ body{
     border-radius: 15px;
     transition: transform 0.3s ease-in-out;
 }
- 
+
 .card img:hover {
     transform: scale(1.03);
 }
@@ -138,8 +144,7 @@ body{
     text-align: justify;
 }
 
-
-.card .info ul, p, h4, h3{
+.card .info ul, p, h4, h3 {
     margin-top: 10px;
     margin-left: 10px;
 }
@@ -151,6 +156,7 @@ body{
     max-width: 100%;
 }
 
+/* FOOTER */
 .footer {
     background-color: #1E5CA8;
     color: white;
@@ -177,10 +183,12 @@ body{
     flex: 1;
     min-width: 250px;
 }
-.footer-column a{
+
+.footer-column a {
     margin-left: 10px;
-    color: white
+    color: white;
 }
+
 .footer hr {
     border: 0;
     height: 1px;
@@ -188,20 +196,26 @@ body{
     margin: 10px 0;
 }
 
+.activity-list {
+    margin-bottom: 80px;
+}
+
 .footer-bottom {
     text-align: center;
     padding-top: 10px;
 }
-.Lokasi iframe{
-    width: 225px;
+
+.Lokasi iframe {
+    width: 100%;
     height: 200px;
     border-radius: 10px;
-    margin-left: 30px;
     margin-top: 10px;
 }
-.text-lok{
-    margin-left: 30px;   
+
+.text-lok {
+    margin-left: 30px;
 }
+
 .social-icons {
     display: flex;
     gap: 10px;
@@ -223,8 +237,16 @@ body{
     height: auto;
 }
 
-/* Media Queries */
+/* Media Queries untuk Responsivitas Font */
 @media screen and (max-width: 1024px) {
+    .judulj {
+        font-size: 2.5rem; /* 40px */
+    }
+
+    .keteranganj {
+        font-size: 1.25rem; /* 20px */
+    }
+
     .card {
         flex-direction: column;
         align-items: center;
@@ -251,3 +273,104 @@ body{
         margin: 5px 0;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .judulj {
+        font-size: 2rem; /* 32px */
+    }
+
+    .keteranganj {
+        font-size: 1rem; /* 16px */
+    }
+
+    .nama {
+        font-size: 1.25rem; /* 20px */
+    }
+
+    .nav-link {
+        font-size: 0.875rem; /* 14px */
+    }
+
+    .nav {
+        display: none; /* Sembunyikan menu navigasi di layar kecil */
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Sesuaikan dengan tinggi header */
+        right: 10px;
+        background-color: #195FA6;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav.active {
+        display: flex; /* Tampilkan menu saat aktif */
+    }
+
+    .hamburger {
+        display: flex; /* Tampilkan tombol hamburger di layar kecil */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .judulj {
+        font-size: 1.5rem; /* 24px */
+    }
+
+    .keteranganj {
+        font-size: 0.875rem; /* 14px */
+    }
+
+    .nama {
+        font-size: 1rem; /* 16px */
+    }
+
+    .nav-link {
+        font-size: 0.75rem; /* 12px */
+    }
+}
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        background-color: #195FA6;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nama {
+        font-size: 1.25rem; /* 20px pada layar kecil */
+    }
+
+    .nav-link {
+        font-size: 0.875rem; /* 14px pada layar kecil */
+    }}
