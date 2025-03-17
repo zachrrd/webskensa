@@ -127,18 +127,17 @@ body {
 }
 /* OPENING IMAGE */
 .gambaran-sekolah {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .opening-img {
-    padding: 10px;
-    width: 100vw;
-    max-width: 100%;
+    width: 100%;
+    height: auto;
     max-height: 100vh;
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     object-fit: cover;
     display: block;
 }
@@ -147,16 +146,17 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(5px);
     color: white;
-    padding: 80px;
+    padding: 20px 40px;
     border-radius: 10px;
     text-align: center;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
     box-shadow: 0 0 15px rgba(0, 123, 255, 1), 
                 0 0 25px rgba(0, 123, 255, 0.9), 
                 0 0 35px rgba(0, 123, 255, 0.8);
+    max-width: 90%;
 }
 
 /* ABOUT SECTION */
@@ -223,10 +223,11 @@ body {
 
 /* Responsive Design untuk Layar Kecil */
 @media (max-width: 768px) {
-    .text-overlay {
-        width: 90%; /* Lebih kecil pada layar kecil */
-        padding: 15px;
-    }
+        .text-overlay {
+            font-size: 14px;
+            padding: 15px 25px;
+            max-width: 80%;
+        }
     .about h1 {
         font-size: 2rem; /* 32px pada layar kecil */
     }
@@ -237,9 +238,10 @@ body {
 }
 
 @media (max-width: 480px) {
-    .text-overlay {
-        width: 95%;
-        font-size: 14px; /* Ukuran teks lebih kecil */
+        .text-overlay {
+            font-size: 12px;
+            padding: 10px 20px;
+            max-width: 90%;
     }
 
     .about h1 {
